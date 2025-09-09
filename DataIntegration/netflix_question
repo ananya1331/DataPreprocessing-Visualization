@@ -1,0 +1,68 @@
+# Exercise 02 – Data Integration, Cleaning, and Normalization (Netflix Dataset)
+
+**Question:**  
+Using the Netflix Movies and TV Shows dataset (`netflix_titles.csv`), perform the following tasks:
+
+1. **Load the dataset** and display:
+   - Shape of the dataset
+   - Column names and their data types
+   - First 10 records
+
+2. **Generate a summary report** using `describe()` for numerical columns.
+
+3. **Identify and count missing values** per column.
+
+4. **Handle missing values** using three different methods:
+   - Impute with mean/median/mode
+   - Forward-fill / backward-fill
+   - Drop rows or columns with missing values  
+   Compare the results of each method.
+
+5. **Detect duplicate rows**, remove them, and report how many were deleted.
+
+6. **Identify inconsistent values** in categorical columns (e.g., “India” vs. “IND”) and standardize them.
+
+7. **Clean text columns** using string operations:
+   - Remove extra spaces
+   - Convert all text to lowercase (or uppercase)
+
+8. **Detect outliers** in one numerical column (e.g., `release_year`) using the IQR method and remove them.
+
+9. **Save the cleaned dataset** as `netflix_cleaned.csv`.
+
+10. **Data Integration**  
+    - Choose a second dataset from Kaggle that shares a common column (e.g., country, title, or year).  
+    - Perform the following merges with the Netflix dataset:
+      - Inner Join
+      - Left Join
+      - Right Join
+      - Outer Join  
+      Compare the number of rows after each join.
+    - Rename mismatched column names where necessary.
+    - Handle conflicting values after merging (e.g., country spellings).
+    - Add a new column from the second dataset into Netflix (e.g., GDP per country).
+    - Concatenate the two datasets row-wise and column-wise, then compare results.
+    - Save the integrated dataset as `netflix_integrated.csv`.
+
+11. **Normalization and Standardization**  
+    - Choose at least two numerical columns (e.g., `release_year`, `duration`).  
+    - Compute summary statistics (mean, median, std, min, max).  
+    - Apply the following scaling techniques and verify:
+      - Min-Max Normalization (range [0,1])
+      - Z-score Standardization (mean ≈ 0, std ≈ 1)
+      - Decimal scaling normalization  
+    - Compare original, Min-Max, and Z-score values in a small table.
+    - Plot histograms of one feature:
+      - Before standardization
+      - After Min-Max scaling
+      - After Z-score scaling  
+    - Save the standardized dataset as `netflix_standardized.csv`.
+
+---
+
+**Answer Files:**  
+- `netflix.py` → Python implementation  
+- `netflix_cleaned.csv` → cleaned dataset  
+- `netflix_integrated.csv` → integrated dataset  
+- `netflix_standardized.csv` → standardized dataset  
+- `results/` → plots and additional outputs
