@@ -1,0 +1,38 @@
+# Exercise 01 – Data Cleaning and Classification (Titanic Dataset)
+
+**Question:**  
+Using the Titanic dataset, perform the following tasks:
+
+1. **Load the dataset** from `titanic_dataset.csv` and display:
+   - Shape of the dataset
+   - Column names and their data types
+   - First 5 records
+
+2. **Drop irrelevant columns** such as `Name`, `Ticket`, `Cabin`, and `PassengerId`.
+
+3. **Handle missing values**:
+   - Fill missing `Age` with the median value
+   - Fill missing `Embarked` with the mode value
+   - Drop any remaining rows with missing values
+
+4. **Encode categorical columns**:
+   - Encode `Sex` column using Label Encoding (Female=0, Male=1)
+   - One-hot encode the `Embarked` column
+
+5. **Split the dataset** into training and test sets (80:20 ratio, stratified by target).
+
+6. **Train a classifier**:
+   - Use Random Forest Classifier with 200 estimators
+   - Fit the model on the training data
+
+7. **Evaluate the model**:
+   - Print accuracy score
+   - Print the classification report (precision, recall, F1-score)
+
+8. **Save the cleaned dataset** into `titanic_cleaned.csv`.
+
+---
+
+**Answer Files:**  
+- `titanic.py` → Python implementation  
+- `titanic_cleaned.csv` → cleaned dataset  
